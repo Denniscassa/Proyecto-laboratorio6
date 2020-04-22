@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= title %></title>
+
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+
+</head>
+
+<body>
+    <div class="container ">
+        <div class="table-responsive">
+            <table border="1" class="table table-bordered table-hover  ">
+                <div >
+                    <tr class="bg-info text-white" >
+                        <th >ID</th>
+                        <th>CODIGO</th>
+                        <th>PRODUCTO</th>
+                        <th>GENERO</th>
+                        <th>MARCA</th>
+                        <th>MODELO</th>
+                        <th>TIPO</th>
+                        <th>STOCK</th>
+                        <th>COLORES</th>
+                        <th>PRECIO</th>
+                        <th>DESCRIPCION</th>
+                    </tr>
+                </div>
+                <% for(i=0; i< datosproducto.length; i++) {%>
+                <tr>
+                    <th><%= datosproducto[i].id %></th>
+                    <th><%= datosproducto[i].codigo %></th>
+                    <th><%= datosproducto[i].producto %></th>
+                    <th><%= datosproducto[i].genero %></th>
+                    <th><%= datosproducto[i].marca %></th>
+                    <th><%= datosproducto[i].modelo %></th>
+                    <th><%= datosproducto[i].tipo %></th>
+                    <th><%= datosproducto[i].stock %></th>
+                    <th><%= datosproducto[i].colores %></th>
+                    <th><%= datosproducto[i].precio %></th>
+                    <th><%= datosproducto[i].descripcion %></th>
+                </tr>
+                <%}%>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
